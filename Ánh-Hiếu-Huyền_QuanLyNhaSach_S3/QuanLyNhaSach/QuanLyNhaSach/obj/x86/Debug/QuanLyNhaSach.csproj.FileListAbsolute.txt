@@ -1,0 +1,15 @@
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.Properties.Resources.resources
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.csproj.GenerateResource.Cache
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.exe
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.pdb
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.exe
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.pdb
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.Form1.resources
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.LoaiSP.resources
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.KhachHang.resources
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.NSX.resources
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.csprojResolveAssemblyReference.cache
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.TimKiemLSP.resources
+F:\ltud\15211TT2032\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.TimSP.resources
+C:\Users\Administrator\Downloads\QuanLyNhaSach\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.exe
+C:\Users\Administrator\Downloads\QuanLyNhaSach\QuanLyNhaSach\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.pdb

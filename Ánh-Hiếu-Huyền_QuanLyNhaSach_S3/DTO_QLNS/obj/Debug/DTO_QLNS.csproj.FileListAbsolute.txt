@@ -1,0 +1,5 @@
+F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\bin\Debug\DTO_QLNS.dll
+F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\bin\Debug\DTO_QLNS.pdb
+F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\obj\Debug\DTO_QLNS.csprojResolveAssemblyReference.cache
+F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\obj\Debug\DTO_QLNS.dll
+F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\obj\Debug\DTO_QLNS.pdb
