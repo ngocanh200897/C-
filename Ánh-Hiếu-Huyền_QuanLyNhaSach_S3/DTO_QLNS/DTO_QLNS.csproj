@@ -43,6 +43,7 @@
     <Compile Include="ET_KH.cs" />
     <Compile Include="ET_LoaiSP.cs" />
     <Compile Include="ET_NSX.cs" />
+    <Compile Include="ET_SP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

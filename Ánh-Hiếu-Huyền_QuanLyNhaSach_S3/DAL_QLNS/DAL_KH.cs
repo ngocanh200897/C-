@@ -30,6 +30,50 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
+        //tim kiem theo ten khach hang
+        public DataTable timTheoTen(string name)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemKH", _cn);
+                cmd.CommandText = "sp_timKiemKH";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ma = new SqlParameter("@ten", name);
+                cmd.Parameters.Add(p_ma);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
+
+        //tim kiem theo ma khach hang
+        public DataTable getListMa(string Id)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemKHMa", _cn);
+                cmd.CommandText = "sp_timKiemKHMa";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ma = new SqlParameter("@ma", Id);
+                cmd.Parameters.Add(p_ma);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
+
         //them loai san pham
         public bool themKH(ET_KH sp)
         {

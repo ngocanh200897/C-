@@ -28,5 +28,13 @@ namespace BUS_QLNS
         {
             return kh.deletNSX(b);
         }
+        public DataTable layma(string b)
+        {
+            return kh.getListMa(b);
+        }
+        public DataTable timten(string b)
+        {
+            return kh.timTheoTen(b);
+        }
     }
 }

@@ -45,6 +45,7 @@
     <Compile Include="BUS_KH.cs" />
     <Compile Include="BUS_LoaiSP.cs" />
     <Compile Include="BUS_NSX.cs" />
+    <Compile Include="BUS_SP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

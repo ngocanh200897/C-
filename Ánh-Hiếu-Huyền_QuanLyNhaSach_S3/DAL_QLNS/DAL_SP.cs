@@ -1,22 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Data.SqlClient;
+using System.Text;
 using System.Data;
+using System.Data.SqlClient;
 using DTO_QLNS;
 
 namespace DAL_QLNS
 {
-    public class DAL_LoaiSP:ConnectDB
+    public class DAL_SP:ConnectDB //ke thua connectDB ket noi csdl
     {
-        //lay danh sach loai san phams
-        public DataTable getListLoaiSP()
+        //lop lay csdl lên
+        //lay danh sach sp
+        //lay danh sach sach
+        public DataTable getListSach()
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_layDSLSP", _cn);
-                cmd.CommandText = "sp_layDSLSP";
+                SqlCommand cmd = new SqlCommand("sp_layDSSPS", _cn);
+                cmd.CommandText = "sp_layDSSPS";
+                cmd.CommandType = CommandType.StoredProcedure;
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+
+            finally
+            {
+                _cn.Close();
+            }
+        }
+        //lay danh sach do dung hoc tap
+        public DataTable getListDDHT()
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_layDSSPDDHT", _cn);
+                cmd.CommandText = "sp_layDSSPDDHT";
+                cmd.CommandType = CommandType.StoredProcedure;
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+
+            finally
+            {
+                _cn.Close();
+            }
+        }
+        public DataTable getListDTT()
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_layDSSPDTT", _cn);
+                cmd.CommandText = "sp_layDSSPDTT";
                 cmd.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -30,18 +72,23 @@ namespace DAL_QLNS
             }
         }
         //them loai san pham
-        public bool themLoaiSP(ET_LoaiSP sp)
+        public bool themKH(ET_KH sp)
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_themLoaiSP", _cn);
-                cmd.CommandText = "sp_themLoaiSP";
+                SqlCommand cmd = new SqlCommand("sp_themKH", _cn);
+                cmd.CommandText = "sp_themKH";
                 cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter p_ma = new SqlParameter("@MaLoaiSP", sp.MaTL);
+                SqlParameter p_ma = new SqlParameter("@MaKH", sp.Makh);
                 cmd.Parameters.Add(p_ma);
-                SqlParameter p_ten = new SqlParameter("@TenLoaiSP", sp.TenTL);
+                SqlParameter p_ten = new SqlParameter("@TenKH", sp.Tenkh);
                 cmd.Parameters.Add(p_ten);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_diachi = new SqlParameter("@DiaChi", sp.Diachi);
+                cmd.Parameters.Add(p_diachi);
+                SqlParameter p_sdt = new SqlParameter("@SDT", sp.Sdt);
+                cmd.Parameters.Add(p_sdt);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;
@@ -60,61 +107,24 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
-        //tim kiem theo ma
-        public DataTable getListMa(string Id)
-        {
-            try
-            {
-                _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_timKiemLSPMa", _cn);
-                cmd.CommandText = "sp_timKiemLSPMa";
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter p_ma = new SqlParameter("@ma", Id);
-                cmd.Parameters.Add(p_ma);
-                DataTable dataTable = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dataTable);
-                return dataTable;
-            }
-            finally
-            {
-                _cn.Close();
-            }
-        }
-        //tim kiem theo ten
-        public DataTable timTheoTen(string name)
-        {
-            try
-            {
-                _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_timKiemLSP", _cn);
-                cmd.CommandText = "sp_timKiemLSP";
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter p_ma = new SqlParameter("@ten", name);
-                cmd.Parameters.Add(p_ma);
-                DataTable dataTable = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dataTable);
-                return dataTable;
-            }
-            finally
-            {
-                _cn.Close();
-            }
-        }
         //chap nhat loai san pham
-        public bool capNhapLoaiSP(ET_LoaiSP sp)
+        public bool capNhapKH(ET_KH sp)
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_capnhapLSP", _cn);
-                cmd.CommandText = "sp_capnhapLSP";
+                SqlCommand cmd = new SqlCommand("sp_capnhapKH", _cn);
+                cmd.CommandText = "sp_capnhapKH";
                 cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter p_ma = new SqlParameter("@MaLoaiSP", sp.MaTL);
+                SqlParameter p_ma = new SqlParameter("@MaKH", sp.Makh);
                 cmd.Parameters.Add(p_ma);
-                SqlParameter p_ten = new SqlParameter("@TenLoaiSP", sp.TenTL);
+                SqlParameter p_ten = new SqlParameter("@TenKH", sp.Tenkh);
                 cmd.Parameters.Add(p_ten);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_diachi = new SqlParameter("@DiaChi", sp.Diachi);
+                cmd.Parameters.Add(p_diachi);
+                SqlParameter p_sdt = new SqlParameter("@SDT", sp.Sdt);
+                cmd.Parameters.Add(p_sdt);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;
@@ -134,13 +144,13 @@ namespace DAL_QLNS
             }
         }
         ////xoa loai san pham
-        public bool deleteLSP(string Id)
+        public bool deleteKH(string Id)
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_xoaLSP", _cn);
-                cmd.CommandText = "sp_xoaLSP";
+                SqlCommand cmd = new SqlCommand("sp_xoaKH", _cn);
+                cmd.CommandText = "sp_xoaKH";
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter p_ma = new SqlParameter("@ma", Id);
                 cmd.Parameters.Add(p_ma);

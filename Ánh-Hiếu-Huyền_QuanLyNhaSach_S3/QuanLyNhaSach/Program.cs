@@ -15,7 +15,7 @@ namespace QuanLyNhaSach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NSX());
+            Application.Run(new TimKiemLSP());
         }
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="DAL_KH.cs" />
     <Compile Include="DAL_LoaiSP.cs" />
     <Compile Include="DAL_NSX.cs" />
+    <Compile Include="DAL_SP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

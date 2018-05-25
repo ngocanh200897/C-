@@ -3,3 +3,8 @@ F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\bin\Debug\DTO_QLNS.pdb
 F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\obj\Debug\DTO_QLNS.csprojResolveAssemblyReference.cache
 F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\obj\Debug\DTO_QLNS.dll
 F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\obj\Debug\DTO_QLNS.pdb
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\bin\Debug\DTO_QLNS.dll
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\bin\Debug\DTO_QLNS.pdb
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\obj\Debug\DTO_QLNS.csprojResolveAssemblyReference.cache
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\obj\Debug\DTO_QLNS.dll
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DTO_QLNS\obj\Debug\DTO_QLNS.pdb
