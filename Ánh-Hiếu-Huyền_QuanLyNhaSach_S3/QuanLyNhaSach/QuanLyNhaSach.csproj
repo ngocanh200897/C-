@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanhMucSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMucSach.designer.cs">
+      <DependentUpon>DanhMucSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoiMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoad.designer.cs">
+      <DependentUpon>FormLoad.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <SubType>Form</SubType>
@@ -93,6 +105,12 @@
     </Compile>
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>
@@ -174,11 +192,17 @@
     <Compile Include="TraCuuTacGia.Designer.cs">
       <DependentUpon>TraCuuTacGia.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DanhMucSach.resx">
+      <DependentUpon>DanhMucSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoad.resx">
+      <DependentUpon>FormLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
@@ -197,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
