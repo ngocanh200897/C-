@@ -106,7 +106,7 @@
             this.btnSua.BackColor = System.Drawing.Color.Orange;
             this.btnSua.Image = global::QuanLyNhaSach.Properties.Resources.interact;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSua.Location = new System.Drawing.Point(231, 211);
+            this.btnSua.Location = new System.Drawing.Point(231, 194);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(135, 47);
             this.btnSua.TabIndex = 2;
@@ -118,7 +118,7 @@
             this.btnXoa.BackColor = System.Drawing.Color.Orange;
             this.btnXoa.Image = global::QuanLyNhaSach.Properties.Resources.delete__4_;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnXoa.Location = new System.Drawing.Point(408, 211);
+            this.btnXoa.Location = new System.Drawing.Point(408, 194);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(124, 47);
             this.btnXoa.TabIndex = 3;
@@ -130,7 +130,7 @@
             this.btnThoat.BackColor = System.Drawing.Color.Orange;
             this.btnThoat.Image = global::QuanLyNhaSach.Properties.Resources.exit;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnThoat.Location = new System.Drawing.Point(598, 211);
+            this.btnThoat.Location = new System.Drawing.Point(598, 194);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(127, 47);
             this.btnThoat.TabIndex = 4;
@@ -140,9 +140,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvTG);
-            this.groupBox2.Location = new System.Drawing.Point(33, 279);
+            this.groupBox2.Location = new System.Drawing.Point(33, 263);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(727, 212);
+            this.groupBox2.Size = new System.Drawing.Size(727, 228);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách tác giả";
@@ -150,9 +150,10 @@
             // dgvTG
             // 
             this.dgvTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTG.Location = new System.Drawing.Point(15, 21);
+            this.dgvTG.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvTG.Location = new System.Drawing.Point(3, 28);
             this.dgvTG.Name = "dgvTG";
-            this.dgvTG.Size = new System.Drawing.Size(706, 179);
+            this.dgvTG.Size = new System.Drawing.Size(721, 197);
             this.dgvTG.TabIndex = 0;
             // 
             // btnThem
@@ -160,7 +161,7 @@
             this.btnThem.BackColor = System.Drawing.Color.Orange;
             this.btnThem.Image = global::QuanLyNhaSach.Properties.Resources.insert_table;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnThem.Location = new System.Drawing.Point(33, 215);
+            this.btnThem.Location = new System.Drawing.Point(33, 198);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(154, 43);
             this.btnThem.TabIndex = 1;

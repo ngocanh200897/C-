@@ -5,3 +5,10 @@ F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\bin\Debug\DTO_QLNS.dll
 F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\bin\Debug\DTO_QLNS.pdb
 F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\obj\Debug\DAL_QLNS.dll
 F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\obj\Debug\DAL_QLNS.pdb
+E:\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\bin\Debug\DAL_QLNS.dll
+E:\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\bin\Debug\DAL_QLNS.pdb
+E:\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\bin\Debug\DTO_QLNS.dll
+E:\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\bin\Debug\DTO_QLNS.pdb
+E:\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\obj\Debug\DAL_QLNS.csprojResolveAssemblyReference.cache
+E:\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\obj\Debug\DAL_QLNS.dll
+E:\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\DAL_QLNS\obj\Debug\DAL_QLNS.pdb

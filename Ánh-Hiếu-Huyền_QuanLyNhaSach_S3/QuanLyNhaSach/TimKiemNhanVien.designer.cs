@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimKiemNhanVien));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -49,7 +48,6 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(29, 30);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -58,25 +56,15 @@
             this.groupBox1.Size = new System.Drawing.Size(514, 123);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh Mục Tìm Kiếm";
+            this.groupBox1.Text = "Nhập Thông Tin Muốn Tìm Kiếm:";
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(87, 52);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 23);
+            this.textBox1.Size = new System.Drawing.Size(366, 24);
             this.textBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(22, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nhập Tên";
             // 
             // groupBox2
             // 
@@ -100,7 +88,7 @@
             this.radioButton2.Location = new System.Drawing.Point(94, 67);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 20);
+            this.radioButton2.Size = new System.Drawing.Size(49, 21);
             this.radioButton2.TabIndex = 0;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Tên";
@@ -113,7 +101,7 @@
             this.radioButton1.Location = new System.Drawing.Point(94, 39);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(43, 20);
+            this.radioButton1.Size = new System.Drawing.Size(43, 21);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Mã";
@@ -125,7 +113,7 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::QuanLyNhaSach.Properties.Resources.mail_find;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(294, 187);
+            this.button1.Location = new System.Drawing.Point(294, 172);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 57);
@@ -139,7 +127,7 @@
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = global::QuanLyNhaSach.Properties.Resources.exit1;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(456, 187);
+            this.button2.Location = new System.Drawing.Point(456, 172);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 57);
@@ -152,11 +140,11 @@
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.gvDsTim);
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(29, 267);
+            this.groupBox3.Location = new System.Drawing.Point(29, 237);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(841, 219);
+            this.groupBox3.Size = new System.Drawing.Size(841, 249);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh Sách Tìm Kiếm";
@@ -164,10 +152,11 @@
             // gvDsTim
             // 
             this.gvDsTim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvDsTim.Location = new System.Drawing.Point(8, 25);
+            this.gvDsTim.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gvDsTim.Location = new System.Drawing.Point(3, 29);
             this.gvDsTim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gvDsTim.Name = "gvDsTim";
-            this.gvDsTim.Size = new System.Drawing.Size(813, 185);
+            this.gvDsTim.Size = new System.Drawing.Size(835, 216);
             this.gvDsTim.TabIndex = 0;
             // 
             // TimKiemNhanVien
@@ -182,7 +171,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Red;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -208,7 +197,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView gvDsTim;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;

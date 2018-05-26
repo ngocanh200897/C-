@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ET_KH.cs" />
     <Compile Include="ET_LoaiSP.cs" />
+    <Compile Include="ET_NhanVien.cs" />
     <Compile Include="ET_NSX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

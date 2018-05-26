@@ -14,6 +14,15 @@ namespace QuanLyNhaSach
         public FormLoad()
         {
             InitializeComponent();
+            Form f = new Form();
+            f.MdiParent = this;
+            f.Show();
+
+        }
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            timer1.Enabled = false;
         }
     }
 }

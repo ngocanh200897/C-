@@ -45,6 +45,7 @@
     <Compile Include="ConnectDB.cs" />
     <Compile Include="DAL_KH.cs" />
     <Compile Include="DAL_LoaiSP.cs" />
+    <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_NSX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
