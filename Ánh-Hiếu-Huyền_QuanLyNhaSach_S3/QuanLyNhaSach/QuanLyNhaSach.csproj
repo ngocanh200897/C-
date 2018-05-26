@@ -11,7 +11,8 @@
     <RootNamespace>QuanLyNhaSach</RootNamespace>
     <AssemblyName>QuanLyNhaSach</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanhMucSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMucSach.designer.cs">
+      <DependentUpon>DanhMucSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoiMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +64,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoad.designer.cs">
+      <DependentUpon>FormLoad.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <SubType>Form</SubType>
@@ -174,11 +187,17 @@
     <Compile Include="TraCuuTacGia.Designer.cs">
       <DependentUpon>TraCuuTacGia.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DanhMucSach.resx">
+      <DependentUpon>DanhMucSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoad.resx">
+      <DependentUpon>FormLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
@@ -247,6 +266,7 @@
     <EmbeddedResource Include="TraCuuTacGia.resx">
       <DependentUpon>TraCuuTacGia.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

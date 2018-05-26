@@ -61,7 +61,6 @@ namespace DAL_QLNS
                 cmd.Parameters.Add(p_ma);
                 SqlParameter p_ten = new SqlParameter("@TenNSX", sp.Ten);
                 cmd.Parameters.Add(p_ten);
-                cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter p_diachi = new SqlParameter("@DiaChi", sp.Diachi);
                 cmd.Parameters.Add(p_diachi);
                 SqlParameter p_sdt = new SqlParameter("@SDT", sp.Sdt);
@@ -96,7 +95,6 @@ namespace DAL_QLNS
                 cmd.Parameters.Add(p_ma);
                 SqlParameter p_ten = new SqlParameter("@TenNSX", sp.Ten);
                 cmd.Parameters.Add(p_ten);
-                cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter p_diachi = new SqlParameter("@DiaChi", sp.Diachi);
                 cmd.Parameters.Add(p_diachi);
                 SqlParameter p_sdt = new SqlParameter("@SDT", sp.Sdt);

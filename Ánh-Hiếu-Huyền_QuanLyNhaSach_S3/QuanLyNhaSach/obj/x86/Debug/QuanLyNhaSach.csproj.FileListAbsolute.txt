@@ -51,6 +51,7 @@ F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\bin\Debug\DAL_QLNS
 F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\bin\Debug\BUS_QLNS.pdb
 F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\bin\Debug\DTO_QLNS.pdb
 F:\ltud\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\bin\Debug\DAL_QLNS.pdb
+<<<<<<< HEAD
 C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.exe
 C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.pdb
 C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.exe
@@ -85,3 +86,12 @@ C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\Qu
 C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.FrmTraCuuLoaiSach.resources
 C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.FrmTraCuuTacGia.resources
 C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.csproj.GenerateResource.Cache
+=======
+E:\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.exe
+E:\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.pdb
+>>>>>>> b265e4937004f1ac593bfe9b7e6855f85710434f
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.DanhMucSach.resources
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.FormLoad.resources
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.Menu.resources
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\bin\Debug\QuanLyNhaSach.exe.config
+C:\Users\Win 8.1 VS8 X64\Desktop\LTUD\Ánh-Hiếu-Huyền_QuanLyNhaSach_S3\QuanLyNhaSach\obj\x86\Debug\QuanLyNhaSach.frmNhanVien.resources

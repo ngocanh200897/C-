@@ -57,7 +57,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // label3
             // 
@@ -96,14 +95,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::QuanLyNhaSach.Properties.Resources.hinh_nen_may_tinh_sieu_kute__11_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 183);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(763, 287);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 

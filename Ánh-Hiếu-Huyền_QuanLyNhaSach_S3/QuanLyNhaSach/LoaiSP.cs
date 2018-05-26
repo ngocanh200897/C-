@@ -23,18 +23,25 @@ namespace QuanLyNhaSach
         
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ET_LoaiSP lsp = new ET_LoaiSP(txtMa.Text, txtTen.Text);
-            if (bLSP.ThemLSP(lsp) == true)
+            if (txtMa.Text != "" && txtTen.Text != "")
             {
-                MessageBox.Show("Them thanh cong ");
-                txtMa.Text = "";
-                txtTen.Text = "";
+                ET_LoaiSP lsp = new ET_LoaiSP(txtMa.Text, txtTen.Text);
+                if (bLSP.ThemLSP(lsp) == true)
+                {
+                    MessageBox.Show("Them thanh cong ");
+                    txtMa.Text = "";
+                    txtTen.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Them khong thanh cong ");
+                }
+                load();
             }
             else
             {
-                MessageBox.Show("Them khong thanh cong ");
+                MessageBox.Show("Kiểm tra thông tin nhập");
             }
-            load();
         }
 
         private void LoaiSP_Load(object sender, EventArgs e)
@@ -82,17 +89,24 @@ namespace QuanLyNhaSach
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            ET_LoaiSP lsp = new ET_LoaiSP(txtMa.Text, txtTen.Text);
-            if (bLSP.SuaLSP(lsp) == true)
+            if (txtMa.Text != "" && txtTen.Text != "")
             {
-                MessageBox.Show("Sua thanh cong ");
+                ET_LoaiSP lsp = new ET_LoaiSP(txtMa.Text, txtTen.Text);
+                if (bLSP.SuaLSP(lsp) == true)
+                {
+                    MessageBox.Show("Sua thanh cong ");
 
+                }
+                else
+                {
+                    MessageBox.Show("Sua khong thanh cong ");
+                }
+                load();
             }
             else
             {
-                MessageBox.Show("Sua khong thanh cong ");
+                MessageBox.Show("Kiểm tra lại thông tin nhập");
             }
-            load();
         }
 
        
