@@ -26,20 +26,28 @@ namespace QuanLyNhaSach
 
         private void btnthem_Click(object sender, EventArgs e)
         {
-            ET_KH lsp = new ET_KH(txtma.Text, txtten.Text, txtdiachi.Text, mtbSDT.Text);
-            if (bLSP.ThemKH(lsp) == true)
+            if (txtdiachi.Text != "" && txtma.Text != "" && txtten.Text != "")
             {
-                MessageBox.Show("Them thanh cong ");
-                txtma.Text = "";
-                txtdiachi.Text = "";
-                txtten.Text = "";
-                mtbSDT.Text = "";
+                ET_KH lsp = new ET_KH(txtma.Text, txtten.Text, txtdiachi.Text, mtbSDT.Text);
+                if (bLSP.ThemKH(lsp) == true)
+                {
+                    MessageBox.Show("Them thanh cong ");
+                    txtma.Text = "";
+                    txtdiachi.Text = "";
+                    txtten.Text = "";
+                    mtbSDT.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Them khong thanh cong ");
+                }
+                load();
             }
             else
             {
-                MessageBox.Show("Them khong thanh cong ");
+                MessageBox.Show("Kiểm Tra Thông Tin Nhập");
             }
-            load();
+           
         }
         public void load()
         {
@@ -57,17 +65,21 @@ namespace QuanLyNhaSach
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-
-            if (bLSP.XoaKh(txtma.Text) == true)
+            DialogResult dr = MessageBox.Show("Bạn Có Muốn Thoát Không", "Thông Báo", MessageBoxButtons.OKCancel);
+            if (dr == DialogResult.OK)
             {
-                MessageBox.Show("Xoa thanh cong ");
+                if (bLSP.XoaKh(txtma.Text) == true)
+                {
+                    MessageBox.Show("Xoa thanh cong ");
 
+                }
+                else
+                {
+                    MessageBox.Show("xoa khong thanh cong ");
+                }
+                load();
             }
-            else
-            {
-                MessageBox.Show("xoa khong thanh cong ");
-            }
-            load();
+          
         }
 
         private void dgvkh_Click(object sender, EventArgs e)
@@ -81,17 +93,24 @@ namespace QuanLyNhaSach
 
         private void btnsua_Click(object sender, EventArgs e)
         {
-            ET_KH lsp = new ET_KH(txtma.Text, txtten.Text, txtdiachi.Text, mtbSDT.Text);
-            if (bLSP.SuaKh(lsp) == true)
+            if (txtdiachi.Text != "" && txtma.Text != "" && txtten.Text != "")
             {
-                MessageBox.Show("Sua thanh cong ");
+                ET_KH lsp = new ET_KH(txtma.Text, txtten.Text, txtdiachi.Text, mtbSDT.Text);
+                if (bLSP.SuaKh(lsp) == true)
+                {
+                    MessageBox.Show("Sua thanh cong ");
 
+                }
+                else
+                {
+                    MessageBox.Show("Sua khong thanh cong ");
+                }
+                load();
             }
             else
             {
-                MessageBox.Show("Sua khong thanh cong ");
+                MessageBox.Show("Kiểm Tra Thông Tin Nhập");
             }
-            load();
         }
     }
 }

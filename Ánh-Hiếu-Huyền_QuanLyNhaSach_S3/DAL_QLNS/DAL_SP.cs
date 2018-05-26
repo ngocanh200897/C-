@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using DTO_QLNS;
 
 namespace DAL_QLNS
 {
-    public class DAL_KH : ConnectDB
+    public class DAL_SP:ConnectDB //ke thua connectDB ket noi csdl
     {
-        //lay danh sach loai san phams
-        public DataTable getListKH()
+        //lop lay csdl lên
+        //lay danh sach sp
+        //lay danh sach sach
+        public DataTable getListSach()
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_layDSKH", _cn);
-                cmd.CommandText = "sp_layDSKH";
+                SqlCommand cmd = new SqlCommand("sp_layDSSPS", _cn);
+                cmd.CommandText = "sp_layDSSPS";
                 cmd.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -30,50 +32,45 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
-        //tim kiem theo ten khach hang
-        public DataTable timTheoTen(string name)
+        //lay danh sach do dung hoc tap
+        public DataTable getListDDHT()
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_timKiemKH", _cn);
-                cmd.CommandText = "sp_timKiemKH";
+                SqlCommand cmd = new SqlCommand("sp_layDSSPDDHT", _cn);
+                cmd.CommandText = "sp_layDSSPDDHT";
                 cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter p_ma = new SqlParameter("@ten", name);
-                cmd.Parameters.Add(p_ma);
                 DataTable dataTable = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(dataTable);
                 return dataTable;
             }
+
             finally
             {
                 _cn.Close();
             }
         }
-
-        //tim kiem theo ma khach hang
-        public DataTable getListMa(string Id)
+        public DataTable getListDTT()
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_timKiemKHMa", _cn);
-                cmd.CommandText = "sp_timKiemKHMa";
+                SqlCommand cmd = new SqlCommand("sp_layDSSPDTT", _cn);
+                cmd.CommandText = "sp_layDSSPDTT";
                 cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter p_ma = new SqlParameter("@ma", Id);
-                cmd.Parameters.Add(p_ma);
                 DataTable dataTable = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(dataTable);
                 return dataTable;
             }
+
             finally
             {
                 _cn.Close();
             }
         }
-
         //them loai san pham
         public bool themKH(ET_KH sp)
         {

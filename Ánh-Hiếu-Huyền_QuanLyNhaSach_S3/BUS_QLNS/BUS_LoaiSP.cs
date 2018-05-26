@@ -27,5 +27,13 @@ namespace BUS_QLNS
         {
             return loaiSP.deleteLSP(b);
         }
+        public DataTable timtheoMa(string b)
+        {
+            return loaiSP.getListMa(b);
+        }
+        public DataTable timtheoten(string b)
+        {
+            return loaiSP.timTheoTen(b);
+        }
     }
 }

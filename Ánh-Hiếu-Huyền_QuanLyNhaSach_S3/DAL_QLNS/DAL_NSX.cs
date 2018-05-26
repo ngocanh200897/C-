@@ -28,6 +28,26 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
+        public DataTable getListMa(string Id)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemNSXMa", _cn);
+                cmd.CommandText = "sp_timKiemNSXMa";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ma = new SqlParameter("@ma", Id);
+                cmd.Parameters.Add(p_ma);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
         //them loai san pham
         public bool themNSX(ET_NSX sp)
         {
@@ -41,7 +61,6 @@ namespace DAL_QLNS
                 cmd.Parameters.Add(p_ma);
                 SqlParameter p_ten = new SqlParameter("@TenNSX", sp.Ten);
                 cmd.Parameters.Add(p_ten);
-                cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter p_diachi = new SqlParameter("@DiaChi", sp.Diachi);
                 cmd.Parameters.Add(p_diachi);
                 SqlParameter p_sdt = new SqlParameter("@SDT", sp.Sdt);
@@ -76,7 +95,6 @@ namespace DAL_QLNS
                 cmd.Parameters.Add(p_ma);
                 SqlParameter p_ten = new SqlParameter("@TenNSX", sp.Ten);
                 cmd.Parameters.Add(p_ten);
-                cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter p_diachi = new SqlParameter("@DiaChi", sp.Diachi);
                 cmd.Parameters.Add(p_diachi);
                 SqlParameter p_sdt = new SqlParameter("@SDT", sp.Sdt);
@@ -122,6 +140,27 @@ namespace DAL_QLNS
             catch (Exception ex)
             {
                 return false;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
+        //tim kiem theo mã
+        public DataTable timTheoTen(string name)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemNSX", _cn);
+                cmd.CommandText = "sp_timKiemNSX";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ma = new SqlParameter("@ten", name);
+                cmd.Parameters.Add(p_ma);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
             }
             finally
             {

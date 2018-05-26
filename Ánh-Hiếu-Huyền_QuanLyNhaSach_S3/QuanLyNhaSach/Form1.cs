@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using DTO_QLNS;
+using BUS_QLNS;
 
 namespace QuanLyNhaSach
 {
@@ -14,6 +17,18 @@ namespace QuanLyNhaSach
         public Form1()
         {
             InitializeComponent();
+        }
+        BUS_SP s = new BUS_SP();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dgvSach.DataSource = s.LayDSS();
+            gvHocTap.DataSource = s.LayDSHT();
+            gvLuuNiem.DataSource = s.LayDTT();
+        }
+
+        private void btnxoas_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
