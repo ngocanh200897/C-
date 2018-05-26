@@ -43,10 +43,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_KH.cs" />
+    <Compile Include="BUS_Kho.cs" />
+    <Compile Include="BUS_LoaiSach.cs" />
     <Compile Include="BUS_LoaiSP.cs" />
     <Compile Include="BUS_NSX.cs" />
-    <Compile Include="BUS_SP.cs" />
+    <Compile Include="BUS_TacGia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="QLBAODataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBAODataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL_QLNS\DAL_QLNS.csproj">
@@ -57,6 +69,24 @@
       <Project>{174F0946-EA2D-4CB8-ACA0-B305A69319B0}</Project>
       <Name>DTO_QLNS</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QLBAODataSet.xsc">
+      <DependentUpon>QLBAODataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBAODataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBAODataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBAODataSet.xss">
+      <DependentUpon>QLBAODataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
