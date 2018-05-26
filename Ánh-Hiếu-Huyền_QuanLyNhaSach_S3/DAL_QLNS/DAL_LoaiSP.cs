@@ -60,6 +60,48 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
+        //tim kiem theo ma
+        public DataTable getListMa(string Id)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemLSPMa", _cn);
+                cmd.CommandText = "sp_timKiemLSPMa";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ma = new SqlParameter("@ma", Id);
+                cmd.Parameters.Add(p_ma);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
+        //tim kiem theo ten
+        public DataTable timTheoTen(string name)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemLSP", _cn);
+                cmd.CommandText = "sp_timKiemLSP";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ma = new SqlParameter("@ten", name);
+                cmd.Parameters.Add(p_ma);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
         //chap nhat loai san pham
         public bool capNhapLoaiSP(ET_LoaiSP sp)
         {

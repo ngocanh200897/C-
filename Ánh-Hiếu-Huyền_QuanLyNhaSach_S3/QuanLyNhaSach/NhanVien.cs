@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNhaSach
 {
-    public partial class FrmNhanVien : Form
+    public partial class frmNhanVien : Form
     {
-        public FrmNhanVien()
+        public frmNhanVien()
         {
             //InitializeComponent();
         }

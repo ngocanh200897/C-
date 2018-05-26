@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtTenLoai = new System.Windows.Forms.TextBox();
             this.lblTenLoai = new System.Windows.Forms.Label();
             this.lblMaLoai = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.dgvLoaiSach = new System.Windows.Forms.DataGridView();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
-            this.txtMaLoai = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiSach)).BeginInit();
@@ -47,7 +47,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.txtMaLoai);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.txtTenLoai);
             this.groupBox1.Controls.Add(this.lblTenLoai);
             this.groupBox1.Controls.Add(this.lblMaLoai);
@@ -59,6 +59,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi Tiết Loại Sách";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(121, 45);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(206, 29);
+            this.comboBox1.TabIndex = 4;
+          
             // 
             // txtTenLoai
             // 
@@ -79,7 +88,7 @@
             // lblMaLoai
             // 
             this.lblMaLoai.AutoSize = true;
-            this.lblMaLoai.Location = new System.Drawing.Point(50, 43);
+            this.lblMaLoai.Location = new System.Drawing.Point(50, 48);
             this.lblMaLoai.Name = "lblMaLoai";
             this.lblMaLoai.Size = new System.Drawing.Size(65, 21);
             this.lblMaLoai.TabIndex = 0;
@@ -96,7 +105,6 @@
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
@@ -109,28 +117,24 @@
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvLoaiSach);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 247);
+            this.groupBox2.Location = new System.Drawing.Point(14, 244);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(824, 211);
+            this.groupBox2.Size = new System.Drawing.Size(763, 211);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách loại sách";
             // 
             // dgvLoaiSach
             // 
-            this.dgvLoaiSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLoaiSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoaiSach.Location = new System.Drawing.Point(20, 28);
             this.dgvLoaiSach.Name = "dgvLoaiSach";
-            this.dgvLoaiSach.Size = new System.Drawing.Size(792, 168);
+            this.dgvLoaiSach.Size = new System.Drawing.Size(721, 168);
             this.dgvLoaiSach.TabIndex = 0;
-            this.dgvLoaiSach.Click += new System.EventHandler(this.dgvLoaiSach_Click);
             // 
             // btnSua
             // 
@@ -143,7 +147,6 @@
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThemMoi
             // 
@@ -156,14 +159,6 @@
             this.btnThemMoi.TabIndex = 1;
             this.btnThemMoi.Text = "Thêm mới";
             this.btnThemMoi.UseVisualStyleBackColor = false;
-            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
-            // 
-            // txtMaLoai
-            // 
-            this.txtMaLoai.Location = new System.Drawing.Point(132, 40);
-            this.txtMaLoai.Name = "txtMaLoai";
-            this.txtMaLoai.Size = new System.Drawing.Size(184, 29);
-            this.txtMaLoai.TabIndex = 4;
             // 
             // FrmLoaiSach
             // 
@@ -184,7 +179,6 @@
             this.Name = "FrmLoaiSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật loại sách";
-            this.Load += new System.EventHandler(this.FrmLoaiSach_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -205,6 +199,6 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvLoaiSach;
-        private System.Windows.Forms.TextBox txtMaLoai;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
