@@ -8,11 +8,21 @@ using System.Text;
 using System.Windows.Forms;
 namespace QuanLyNhaSach
 {
-    public partial class frmDanhMucSach : Form
+    public partial class DanhMucSach : Form
     {
-        public frmDanhMucSach()
+        public DanhMucSach()
         {
             InitializeComponent();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

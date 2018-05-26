@@ -121,5 +121,49 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
+
+        // tra cứu loại sách theo mã 
+        public DataTable timKiemTheoMa(string Id)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemLoaiSachTheoMa", _cn);
+                cmd.CommandText = "sp_timKiemLoaiSachTheoMa";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ma = new SqlParameter("@maLoaiSach", Id);
+                cmd.Parameters.Add(p_ma);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
+
+        // tra cứu loai sách theo tên
+        public DataTable timTheoLoaiSach(string name)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemLoaiSachTheoTen", _cn);
+                cmd.CommandText = "sp_timKiemLoaiSachTheoTen";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ten = new SqlParameter("@tenLoaiSach", name);
+                cmd.Parameters.Add(p_ten);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
     }
 }

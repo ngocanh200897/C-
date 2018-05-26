@@ -28,5 +28,14 @@ namespace BUS_QLNS
         {
             return TG.xoaTG(tg);
         }
+        public DataTable TimTGTheoMa(string tg)
+        {
+            return TG.timKiemTheoMa(tg);
+        }
+        public DataTable TimTGTheoTen(string tg)
+        {
+            return TG.timTheoTenTG(tg);
+        }
+
     }
 }

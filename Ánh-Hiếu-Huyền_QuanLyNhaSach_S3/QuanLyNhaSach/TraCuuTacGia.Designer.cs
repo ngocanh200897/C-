@@ -32,8 +32,8 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radTen = new System.Windows.Forms.RadioButton();
+            this.radMa = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvTG = new System.Windows.Forms.DataGridView();
@@ -66,18 +66,19 @@
             // btnTimKiem
             // 
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnTimKiem.Location = new System.Drawing.Point(245, 39);
+            this.btnTimKiem.Location = new System.Drawing.Point(256, 37);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(129, 34);
             this.btnTimKiem.TabIndex = 0;
             this.btnTimKiem.Text = "Tỉm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.radTen);
+            this.groupBox2.Controls.Add(this.radMa);
             this.groupBox2.Location = new System.Drawing.Point(484, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(292, 104);
@@ -85,27 +86,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm theo";
             // 
-            // radioButton2
+            // radTen
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(162, 44);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(110, 25);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Tên tác giả";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radTen.AutoSize = true;
+            this.radTen.Location = new System.Drawing.Point(162, 44);
+            this.radTen.Name = "radTen";
+            this.radTen.Size = new System.Drawing.Size(110, 25);
+            this.radTen.TabIndex = 1;
+            this.radTen.TabStop = true;
+            this.radTen.Text = "Tên tác giả";
+            this.radTen.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radMa
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(31, 44);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(105, 25);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Mã tác giả";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radMa.AutoSize = true;
+            this.radMa.Location = new System.Drawing.Point(31, 44);
+            this.radMa.Name = "radMa";
+            this.radMa.Size = new System.Drawing.Size(105, 25);
+            this.radMa.TabIndex = 0;
+            this.radMa.TabStop = true;
+            this.radMa.Text = "Mã tác giả";
+            this.radMa.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -118,19 +119,21 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvTG);
-            this.groupBox3.Location = new System.Drawing.Point(25, 214);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Location = new System.Drawing.Point(0, 226);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(758, 237);
+            this.groupBox3.Size = new System.Drawing.Size(795, 237);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin về tác giả";
             // 
             // dgvTG
             // 
+            this.dgvTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTG.Location = new System.Drawing.Point(6, 28);
             this.dgvTG.Name = "dgvTG";
-            this.dgvTG.Size = new System.Drawing.Size(745, 203);
+            this.dgvTG.Size = new System.Drawing.Size(770, 203);
             this.dgvTG.TabIndex = 0;
             // 
             // btnThoat
@@ -138,12 +141,13 @@
             this.btnThoat.BackColor = System.Drawing.Color.Orange;
             this.btnThoat.Image = global::QuanLyNhaSach.Properties.Resources.exit;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnThoat.Location = new System.Drawing.Point(637, 162);
+            this.btnThoat.Location = new System.Drawing.Point(406, 149);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(129, 46);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // FrmTraCuuTacGia
             // 
@@ -163,6 +167,7 @@
             this.Name = "FrmTraCuuTacGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tra cứu thông tin tác giả";
+            this.Load += new System.EventHandler(this.FrmTraCuuTacGia_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -180,8 +185,8 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radTen;
+        private System.Windows.Forms.RadioButton radMa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnThoat;

@@ -7,6 +7,6 @@ namespace DAL_QLNS
 {
     public class ConnectDB
     {
-        protected SqlConnection _cn = new SqlConnection(@"Data Source=DESKTOP-UE784RS\SQLEXPRESS;Initial Catalog=Proj_QuanLyNhaSach;Integrated Security=True");
+        protected SqlConnection _cn = new SqlConnection(@"Data Source=N8FQTC197ECO4RS\SQLEXPRESS;Initial Catalog=Proj_QuanLyNhaSach;Integrated Security=True");
     }
 }

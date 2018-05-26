@@ -124,5 +124,49 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
+
+        //tim kiem theo ten tác giả
+        public DataTable timTheoTenTG(string name)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemTGTheoTen", _cn);
+                cmd.CommandText = "sp_timKiemTGTheoTen";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ten = new SqlParameter("@tenTG", name);
+                cmd.Parameters.Add(p_ten);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
+
+        //tim kiem theo ma tác giả
+        public DataTable timKiemTheoMa(string Id)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_timKiemTGTheoMa", _cn);
+                cmd.CommandText = "sp_timKiemTGTheoMa";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ma = new SqlParameter("@maTG", Id);
+                cmd.Parameters.Add(p_ma);
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                return dataTable;
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
     }
 }

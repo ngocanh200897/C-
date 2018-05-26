@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +57,14 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(-3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(760, 2);
+            this.label3.TabIndex = 11;
             // 
             // label4
             // 
@@ -76,6 +83,15 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "label5";
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(761, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(2, 465);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "label5";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -85,6 +101,19 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Gabriola", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(763, 183);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Welcome ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Black;
@@ -102,35 +131,6 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Phần mềm Quản Lý Nhà Sách được xây dựng nhằm giúp cho việc quản lý n" +
                 "hà sách một cách dễ dàng, nhanh chóng, chính xác, hiệu quả...";
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(761, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(2, 465);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "label5";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(-3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(760, 2);
-            this.label3.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Gabriola", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(763, 183);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Welcome ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // FormLoad
             // 
@@ -162,13 +162,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
 
+
+
+
+        public System.EventHandler pictureBox1_Click { get; set; }
+
+        public System.EventHandler timer1_Tick_1 { get; set; }
     }
 }

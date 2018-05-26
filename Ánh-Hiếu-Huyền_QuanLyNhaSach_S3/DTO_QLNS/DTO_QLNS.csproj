@@ -44,7 +44,6 @@
     <Compile Include="ET_Kho.cs" />
     <Compile Include="ET_LoaiSach.cs" />
     <Compile Include="ET_LoaiSP.cs" />
-    <Compile Include="ET_NhanVien.cs" />
     <Compile Include="ET_NSX.cs" />
     <Compile Include="ET_SP.cs" />
     <Compile Include="ET_TacGia.cs" />

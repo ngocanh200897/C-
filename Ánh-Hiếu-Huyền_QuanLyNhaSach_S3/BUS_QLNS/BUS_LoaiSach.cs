@@ -28,5 +28,13 @@ namespace BUS_QLNS
         {
             return ls.xoaLoaiSach(s);
         }
+        public DataTable TimLoaiSachTheoMa(string tg)
+        {
+            return ls.timLoaiSachTheoMa(tg);
+        }
+        public DataTable TimLoaiSachTheoTen(string tg)
+        {
+            return ls.timLoaiSachTheoTen(tg);
+        }
     }
 }

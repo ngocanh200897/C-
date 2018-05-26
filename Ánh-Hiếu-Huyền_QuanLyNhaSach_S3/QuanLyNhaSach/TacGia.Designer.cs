@@ -40,6 +40,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvTG = new System.Windows.Forms.DataGridView();
             this.btnThem = new System.Windows.Forms.Button();
+            this.txtMaTG = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTG)).BeginInit();
@@ -48,6 +49,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox1.Controls.Add(this.txtMaTG);
             this.groupBox1.Controls.Add(this.lblNamSinh);
             this.groupBox1.Controls.Add(this.lblTenTG);
             this.groupBox1.Controls.Add(this.txtTenTG);
@@ -95,7 +97,7 @@
             // lblMaTG
             // 
             this.lblMaTG.AutoSize = true;
-            this.lblMaTG.Location = new System.Drawing.Point(31, 49);
+            this.lblMaTG.Location = new System.Drawing.Point(40, 49);
             this.lblMaTG.Name = "lblMaTG";
             this.lblMaTG.Size = new System.Drawing.Size(87, 21);
             this.lblMaTG.TabIndex = 0;
@@ -106,67 +108,80 @@
             this.btnSua.BackColor = System.Drawing.Color.Orange;
             this.btnSua.Image = global::QuanLyNhaSach.Properties.Resources.interact;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSua.Location = new System.Drawing.Point(231, 194);
+            this.btnSua.Location = new System.Drawing.Point(231, 211);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(135, 47);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Orange;
             this.btnXoa.Image = global::QuanLyNhaSach.Properties.Resources.delete__4_;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnXoa.Location = new System.Drawing.Point(408, 194);
+            this.btnXoa.Location = new System.Drawing.Point(408, 211);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(124, 47);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.Orange;
             this.btnThoat.Image = global::QuanLyNhaSach.Properties.Resources.exit;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnThoat.Location = new System.Drawing.Point(598, 194);
+            this.btnThoat.Location = new System.Drawing.Point(598, 211);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(127, 47);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvTG);
-            this.groupBox2.Location = new System.Drawing.Point(33, 263);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 292);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(727, 228);
+            this.groupBox2.Size = new System.Drawing.Size(775, 212);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách tác giả";
             // 
             // dgvTG
             // 
+            this.dgvTG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTG.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvTG.Location = new System.Drawing.Point(3, 28);
+            this.dgvTG.Location = new System.Drawing.Point(15, 21);
             this.dgvTG.Name = "dgvTG";
-            this.dgvTG.Size = new System.Drawing.Size(721, 197);
+            this.dgvTG.Size = new System.Drawing.Size(745, 179);
             this.dgvTG.TabIndex = 0;
+            this.dgvTG.Click += new System.EventHandler(this.dgvTG_Click);
             // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.Orange;
             this.btnThem.Image = global::QuanLyNhaSach.Properties.Resources.insert_table;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnThem.Location = new System.Drawing.Point(33, 198);
+            this.btnThem.Location = new System.Drawing.Point(33, 215);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(154, 43);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm Mới";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtMaTG
+            // 
+            this.txtMaTG.Location = new System.Drawing.Point(153, 49);
+            this.txtMaTG.Name = "txtMaTG";
+            this.txtMaTG.Size = new System.Drawing.Size(222, 29);
+            this.txtMaTG.TabIndex = 6;
             // 
             // FrmTacGia
             // 
@@ -184,6 +199,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmTacGia";
             this.Text = "TacGia";
+            this.Load += new System.EventHandler(this.FrmTacGia_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -206,5 +222,6 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvTG;
+        private System.Windows.Forms.TextBox txtMaTG;
     }
 }

@@ -13,15 +13,9 @@ namespace QuanLyNhaSach
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //FormLoad f = new FormLoad();
-            //f.ShowDialog();
-            //if (f.DialogResult == DialogResult.OK)
-            //{
-            //    Application.Run(new frmNhanVien());
-            //}
-            Application.Run(new KH());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmTraCuuTacGia());
         }
     }
 }
