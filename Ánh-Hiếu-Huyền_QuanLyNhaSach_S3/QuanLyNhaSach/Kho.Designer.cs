@@ -29,21 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dtpNgayXuat = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.txtSLNhap = new System.Windows.Forms.TextBox();
-            this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.txtTenKho = new System.Windows.Forms.TextBox();
             this.lblSoPhieu = new System.Windows.Forms.Label();
             this.lblSLTon = new System.Windows.Forms.Label();
             this.lblSLXuat = new System.Windows.Forms.Label();
             this.lblNgayXuat = new System.Windows.Forms.Label();
             this.lblSLNhap = new System.Windows.Forms.Label();
             this.lblNgayNhap = new System.Windows.Forms.Label();
-            this.lblTenSP = new System.Windows.Forms.Label();
+            this.lblTenKho = new System.Windows.Forms.Label();
             this.lblMaSP = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvKho = new System.Windows.Forms.DataGridView();
@@ -51,10 +47,11 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.txtSoLuongXuat = new System.Windows.Forms.TextBox();
+            this.txtSoTon = new System.Windows.Forms.TextBox();
+            this.txtSoPhieu = new System.Windows.Forms.TextBox();
+            this.txtMaKho = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKho)).BeginInit();
             this.SuspendLayout();
@@ -62,21 +59,21 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.numericUpDown3);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.txtMaKho);
+            this.groupBox1.Controls.Add(this.txtSoPhieu);
+            this.groupBox1.Controls.Add(this.txtSoTon);
+            this.groupBox1.Controls.Add(this.txtSoLuongXuat);
             this.groupBox1.Controls.Add(this.dtpNgayXuat);
             this.groupBox1.Controls.Add(this.dtpNgayNhap);
             this.groupBox1.Controls.Add(this.txtSLNhap);
-            this.groupBox1.Controls.Add(this.txtTenSP);
+            this.groupBox1.Controls.Add(this.txtTenKho);
             this.groupBox1.Controls.Add(this.lblSoPhieu);
             this.groupBox1.Controls.Add(this.lblSLTon);
             this.groupBox1.Controls.Add(this.lblSLXuat);
             this.groupBox1.Controls.Add(this.lblNgayXuat);
             this.groupBox1.Controls.Add(this.lblSLNhap);
             this.groupBox1.Controls.Add(this.lblNgayNhap);
-            this.groupBox1.Controls.Add(this.lblTenSP);
+            this.groupBox1.Controls.Add(this.lblTenKho);
             this.groupBox1.Controls.Add(this.lblMaSP);
             this.groupBox1.Location = new System.Drawing.Point(14, 14);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
@@ -86,54 +83,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết kho";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(539, 184);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(209, 29);
-            this.numericUpDown3.TabIndex = 19;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(539, 135);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(209, 29);
-            this.numericUpDown2.TabIndex = 19;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(539, 93);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(209, 29);
-            this.numericUpDown1.TabIndex = 19;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(155, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(206, 29);
-            this.comboBox1.TabIndex = 18;
             // 
             // dtpNgayXuat
             // 
@@ -158,12 +107,12 @@
             this.txtSLNhap.Size = new System.Drawing.Size(209, 29);
             this.txtSLNhap.TabIndex = 11;
             // 
-            // txtTenSP
+            // txtTenKho
             // 
-            this.txtTenSP.Location = new System.Drawing.Point(155, 92);
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(206, 29);
-            this.txtTenSP.TabIndex = 9;
+            this.txtTenKho.Location = new System.Drawing.Point(155, 92);
+            this.txtTenKho.Name = "txtTenKho";
+            this.txtTenKho.Size = new System.Drawing.Size(206, 29);
+            this.txtTenKho.TabIndex = 9;
             // 
             // lblSoPhieu
             // 
@@ -219,41 +168,44 @@
             this.lblNgayNhap.TabIndex = 2;
             this.lblNgayNhap.Text = "Ngày nhập kho";
             // 
-            // lblTenSP
+            // lblTenKho
             // 
-            this.lblTenSP.AutoSize = true;
-            this.lblTenSP.Location = new System.Drawing.Point(34, 95);
-            this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(115, 21);
-            this.lblTenSP.TabIndex = 1;
-            this.lblTenSP.Text = "Tên sản phẩm";
+            this.lblTenKho.AutoSize = true;
+            this.lblTenKho.Location = new System.Drawing.Point(77, 95);
+            this.lblTenKho.Name = "lblTenKho";
+            this.lblTenKho.Size = new System.Drawing.Size(72, 21);
+            this.lblTenKho.TabIndex = 1;
+            this.lblTenKho.Text = "Tên kho";
             // 
             // lblMaSP
             // 
             this.lblMaSP.AutoSize = true;
-            this.lblMaSP.Location = new System.Drawing.Point(39, 46);
+            this.lblMaSP.Location = new System.Drawing.Point(77, 50);
             this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(110, 21);
+            this.lblMaSP.Size = new System.Drawing.Size(67, 21);
             this.lblMaSP.TabIndex = 0;
-            this.lblMaSP.Text = "Mã sản phẩm";
+            this.lblMaSP.Text = "Mã kho";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvKho);
-            this.groupBox2.Location = new System.Drawing.Point(14, 423);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 443);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(784, 222);
+            this.groupBox2.Size = new System.Drawing.Size(826, 222);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách kho";
             // 
             // dgvKho
             // 
+            this.dgvKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKho.Location = new System.Drawing.Point(22, 28);
             this.dgvKho.Name = "dgvKho";
-            this.dgvKho.Size = new System.Drawing.Size(741, 174);
+            this.dgvKho.Size = new System.Drawing.Size(776, 174);
             this.dgvKho.TabIndex = 0;
+            this.dgvKho.Click += new System.EventHandler(this.dgvKho_Click);
             // 
             // btnThoat
             // 
@@ -266,6 +218,7 @@
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXoa
             // 
@@ -278,6 +231,7 @@
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -290,6 +244,7 @@
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -303,6 +258,34 @@
             this.btnThem.Text = "Thêm mới";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtSoLuongXuat
+            // 
+            this.txtSoLuongXuat.Location = new System.Drawing.Point(539, 96);
+            this.txtSoLuongXuat.Name = "txtSoLuongXuat";
+            this.txtSoLuongXuat.Size = new System.Drawing.Size(209, 29);
+            this.txtSoLuongXuat.TabIndex = 19;
+            // 
+            // txtSoTon
+            // 
+            this.txtSoTon.Location = new System.Drawing.Point(540, 138);
+            this.txtSoTon.Name = "txtSoTon";
+            this.txtSoTon.Size = new System.Drawing.Size(208, 29);
+            this.txtSoTon.TabIndex = 20;
+            // 
+            // txtSoPhieu
+            // 
+            this.txtSoPhieu.Location = new System.Drawing.Point(540, 184);
+            this.txtSoPhieu.Name = "txtSoPhieu";
+            this.txtSoPhieu.Size = new System.Drawing.Size(208, 29);
+            this.txtSoPhieu.TabIndex = 21;
+            // 
+            // txtMaKho
+            // 
+            this.txtMaKho.Location = new System.Drawing.Point(155, 45);
+            this.txtMaKho.Name = "txtMaKho";
+            this.txtMaKho.Size = new System.Drawing.Size(206, 29);
+            this.txtMaKho.TabIndex = 22;
             // 
             // FrmKho
             // 
@@ -323,11 +306,9 @@
             this.Name = "FrmKho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kho";
+            this.Load += new System.EventHandler(this.FrmKho_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKho)).EndInit();
             this.ResumeLayout(false);
@@ -339,14 +320,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpNgayNhap;
         private System.Windows.Forms.TextBox txtSLNhap;
-        private System.Windows.Forms.TextBox txtTenSP;
+        private System.Windows.Forms.TextBox txtTenKho;
         private System.Windows.Forms.Label lblSoPhieu;
         private System.Windows.Forms.Label lblSLTon;
         private System.Windows.Forms.Label lblSLXuat;
         private System.Windows.Forms.Label lblNgayXuat;
         private System.Windows.Forms.Label lblSLNhap;
         private System.Windows.Forms.Label lblNgayNhap;
-        private System.Windows.Forms.Label lblTenSP;
+        private System.Windows.Forms.Label lblTenKho;
         private System.Windows.Forms.Label lblMaSP;
         private System.Windows.Forms.DateTimePicker dtpNgayXuat;
         private System.Windows.Forms.Button btnThem;
@@ -355,9 +336,9 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvKho;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.TextBox txtSoLuongXuat;
+        private System.Windows.Forms.TextBox txtSoPhieu;
+        private System.Windows.Forms.TextBox txtSoTon;
+        private System.Windows.Forms.TextBox txtMaKho;
     }
 }

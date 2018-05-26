@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using DTO_QLNS;
-
 namespace DAL_QLNS
 {
-    public class DAL_LoaiSP:ConnectDB
+    public class DAL_TacGia : ConnectDB
     {
-        //lay danh sach loai san phams
-        public DataTable getListLoaiSP()
+        //lay danh sach tác giả
+        public DataTable layDSTG()
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_layDSLSP", _cn);
-                cmd.CommandText = "sp_layDSLSP";
+                SqlCommand cmd = new SqlCommand("sp_layDSTG", _cn);
+                cmd.CommandText = "sp_layDSTG";
                 cmd.CommandType = CommandType.StoredProcedure;
                 DataTable dataTable = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -29,19 +29,53 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
-        //them loai san pham
-        public bool themLoaiSP(ET_LoaiSP sp)
+
+
+        //them tác giả
+        public bool themTG(ET_TacGia tg)
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_themLoaiSP", _cn);
-                cmd.CommandText = "sp_themLoaiSP";
+                SqlCommand cmd = new SqlCommand("sp_themTacGia", _cn);
+                cmd.CommandText = "sp_themTacGia";
                 cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter p_ma = new SqlParameter("@MaLoaiSP", sp.MaTL);
+                SqlParameter p_ma = new SqlParameter("@MaTG", tg.MaTG);
                 cmd.Parameters.Add(p_ma);
-                SqlParameter p_ten = new SqlParameter("@TenLoaiSP", sp.TenTL);
+                SqlParameter p_ten = new SqlParameter("@TenTG", tg.TenTG);
                 cmd.Parameters.Add(p_ten);
+                SqlParameter p_namSinh = new SqlParameter("@NamSinh", tg.NamSinh);
+                cmd.Parameters.Add(p_namSinh);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally
+            {
+                _cn.Close();
+            }
+        }
+
+        //cap nhat tác giả
+        public bool capNhapTacGia(ET_TacGia tg)
+        {
+            try
+            {
+                _cn.Open();
+                SqlCommand cmd = new SqlCommand("sp_capnhapTacGia", _cn);
+                cmd.CommandText = "sp_capnhapTacGia";
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter p_ma = new SqlParameter("@MaTG", tg.MaTG);
+                cmd.Parameters.Add(p_ma);
+                SqlParameter p_ten = new SqlParameter("@TenTG", tg.TenTG);
+                cmd.Parameters.Add(p_ten);
+                SqlParameter p_namSinh = new SqlParameter("@NamSinh", tg.NamSinh);
+                cmd.Parameters.Add(p_namSinh);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     return true;
@@ -60,45 +94,15 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
-        //chap nhat loai san pham
-        public bool capNhapLoaiSP(ET_LoaiSP sp)
+
+        //xóa tác giả
+        public bool xoaTG(string Id)
         {
             try
             {
                 _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_capnhapLSP", _cn);
-                cmd.CommandText = "sp_capnhapLSP";
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter p_ma = new SqlParameter("@MaLoaiSP", sp.MaTL);
-                cmd.Parameters.Add(p_ma);
-                SqlParameter p_ten = new SqlParameter("@TenLoaiSP", sp.TenTL);
-                cmd.Parameters.Add(p_ten);
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-            finally
-            {
-                _cn.Close();
-            }
-        }
-        ////xoa loai san pham
-        public bool deleteLSP(string Id)
-        {
-            try
-            {
-                _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_xoaLSP", _cn);
-                cmd.CommandText = "sp_xoaLSP";
+                SqlCommand cmd = new SqlCommand("sp_xoaTacGia", _cn);
+                cmd.CommandText = "sp_xoaTacGia";
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter p_ma = new SqlParameter("@ma", Id);
                 cmd.Parameters.Add(p_ma);
