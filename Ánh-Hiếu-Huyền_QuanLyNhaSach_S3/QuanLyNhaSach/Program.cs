@@ -15,7 +15,7 @@ namespace QuanLyNhaSach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmTraCuuTacGia());
+            Application.Run(new KH());
         }
     }
 }

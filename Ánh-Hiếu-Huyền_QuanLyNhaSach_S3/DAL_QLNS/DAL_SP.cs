@@ -32,45 +32,6 @@ namespace DAL_QLNS
                 _cn.Close();
             }
         }
-        //lay danh sach do dung hoc tap
-        public DataTable getListDDHT()
-        {
-            try
-            {
-                _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_layDSSPDDHT", _cn);
-                cmd.CommandText = "sp_layDSSPDDHT";
-                cmd.CommandType = CommandType.StoredProcedure;
-                DataTable dataTable = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dataTable);
-                return dataTable;
-            }
-
-            finally
-            {
-                _cn.Close();
-            }
-        }
-        public DataTable getListDTT()
-        {
-            try
-            {
-                _cn.Open();
-                SqlCommand cmd = new SqlCommand("sp_layDSSPDTT", _cn);
-                cmd.CommandText = "sp_layDSSPDTT";
-                cmd.CommandType = CommandType.StoredProcedure;
-                DataTable dataTable = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dataTable);
-                return dataTable;
-            }
-
-            finally
-            {
-                _cn.Close();
-            }
-        }
         //them loai san pham
         public bool themKH(ET_KH sp)
         {

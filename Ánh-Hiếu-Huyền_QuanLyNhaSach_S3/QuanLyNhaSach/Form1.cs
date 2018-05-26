@@ -22,13 +22,6 @@ namespace QuanLyNhaSach
         private void Form1_Load(object sender, EventArgs e)
         {
             dgvSach.DataSource = s.LayDSS();
-            gvHocTap.DataSource = s.LayDSHT();
-            gvLuuNiem.DataSource = s.LayDTT();
-        }
-
-        private void btnxoas_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

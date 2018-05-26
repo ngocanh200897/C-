@@ -16,15 +16,6 @@ namespace BUS_QLNS
         {
             return s.getListSach();
         }
-        public DataTable LayDSHT()
-        {
-            return s.getListDDHT();
-        }
-        public DataTable LayDTT()
-        {
-            return s.getListDTT();
-        }
-
         //public bool ThemLSP(ET_LoaiSP b)
         //{
         //    return loaiSP.themLoaiSP(b);
