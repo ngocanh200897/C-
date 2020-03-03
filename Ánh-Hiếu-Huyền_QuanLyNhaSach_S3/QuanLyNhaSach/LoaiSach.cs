@@ -22,6 +22,7 @@ namespace QuanLyNhaSach
         private void FrmLoaiSach_Load(object sender, EventArgs e)
         {
             load();
+			aaaaaaaaaaaaaa;
         }
 
         // 
