@@ -23,6 +23,7 @@ namespace DAL_QLNS
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(dataTable);
                 return dataTable;
+				//NgocAnh test
             }
 
             finally
