@@ -30,6 +30,7 @@ namespace QuanLyNhaSach
         public void load()
         {
             dgvKho.DataSource = kho.LayDSKho();
+			yutrrttewrwewe
         }
 
         private void btnThem_Click(object sender, EventArgs e)
